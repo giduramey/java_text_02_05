@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
+    int lastArticleId = 0;
 
     System.out.println("== 자바 텍스트 게시판 시작==");
 
@@ -49,4 +50,10 @@ class Article {
   int id;
   String subject;
   String content;
+
+  @Override
+  public String toString() {
+    return "{id : %d, subject: \"%s\", content: \"%s\"}".formatted(id, subject,content);
+  }
 }
+
